@@ -43,6 +43,8 @@ socket.onmessage = function (event) {
                 </div>
             </li>`
         }
+
+        chat.scrollTop = 9999;
     }
 };
 
