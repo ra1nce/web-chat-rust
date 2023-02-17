@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/img/anon.ico">
+
+    <title>Anonymous-chat</title>
+</head>
+<body>
+    <div class="chat-wrapper center">
+        <ul id="chat">
+            {% for (nickname, msg, is_my) in messages %}
+                {% if is_my %}
+                    <li class="message-block my-message">
+                        <div>
+                            <p class="nickname">
+                                Your
+                            </p>
+        
+                            <p class="message">
+                                {{ msg }}
+                            </p>
+                        </div>
+                    </li>
+                {% else %}
+                    <li class="message-block">
+                        <div>
+                            <p class="nickname">
+                                {{ nickname }}
+                            </p>
+        
+                            <p class="message">
+                                {{ msg }}
+                            </p>
+                        </div>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="input-block center">
+        
+        <input class="input-message" id="input-message" type="text" name="message" placeholder="Текст сообщения">
+        <input class="button" type="button" id="send_message" value="Отправить">
+        
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

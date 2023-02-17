@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body {
+    background: #111;
+
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.chat-wrapper {
+    margin-top: 15px;
+}
+
+#chat {
+    width: 700px;
+    height: 75vh;
+    padding:15px;
+    overflow: auto;
+}
+
+.message-block {
+    margin: 12px 0;
+}
+
+.message {
+    padding: 12px 28px;
+    margin: 12px 32px;
+
+    display: inline-block;
+
+    background: rgba(66, 201, 170, 0.372);
+    border-radius: 0 30px 30px;
+
+    max-width: 600px;
+    word-wrap: anywhere;
+}
+
+.nickname {
+    color: #0ff9d6;
+}
+
+.my-message {
+    display: flex;
+    justify-content: right;
+}
+
+.my-message .message {
+    background: rgba(201, 66, 176, 0.372);
+    border-radius: 30px 0 30px 30px;
+}
+
+.my-message .nickname {
+    text-align: right;
+    color: rgb(201, 66, 176);
+}
+
+.my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.input-block {
+    margin-top: 30px;
+}
+
+.input-message {
+    padding: 12px 24px;
+
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+
+    background: none;
+    border: rgb(201, 66, 176) 1px solid;
+    border-radius: 10px;
+
+    margin-right: 10px;
+}
+
+.button {
+    padding: 12px 24px;
+    
+    color: #fff;
+    font-size: 16px;
+    background: none;
+
+    border: rgb(201, 66, 176) 1px solid;
+    border-radius: 10px;
+}
